@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="libs\InsertSort.cs" />
-    <Compile Include="libs\MergeSort.cs" />
+    <Compile Include="libs\MergeSort.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="libs\QuickSort.cs" />
     <Compile Include="libs\SelectSort.cs" />
     <Compile Include="libs\ShellSort.cs" />
