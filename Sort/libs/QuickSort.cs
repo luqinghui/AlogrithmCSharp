@@ -6,24 +6,18 @@ using System.Threading.Tasks;
 
 namespace Sort.libs
 {
-    //选择排序
-    public class SelectSort<T>
+    class QuickSort<T>
     {
         public static void sort(T[] a)
         {
             show(a);
-            int len = a.Length;
-            for (int i = 0; i < len; i++)
-            {
-                int min = i;
-                for (int j = i + 1; j < len; j++)
-                {
-                    if (less(a[j], a[min])) min = j;
-                }
-                exch(a, i, min);
-            }
+
+
+
             show(a);
         }
+
+
         private static bool less(T a, T b)
         {
             IComparable at = a as IComparable;
@@ -39,7 +33,7 @@ namespace Sort.libs
         private static void show(T[] a)
         {
             int len = a.Length;
-            for(int i = 0; i < len; i++)
+            for (int i = 0; i < len; i++)
             {
                 Console.Write(a[i] + " ");
             }

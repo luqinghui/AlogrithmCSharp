@@ -12,7 +12,16 @@ namespace Sort.libs
         {
             show(a);
 
-            
+            int N = a.Length;
+            int h = 1;
+            while (h < N / 3) h = 3 * h + 1;
+            while (h >= 1)
+            {
+                for (int i = h; i < N; i++)
+                    for (int j = i; j >= h && less(a[j], a[j - h]); j -= h)
+                        exch(a, j, j - h);
+            }
+            h = h / 3;
 
             show(a);
         }
@@ -36,16 +45,6 @@ namespace Sort.libs
                 Console.Write(a[i] + " ");
             }
             Console.WriteLine();
-        }
-        public static bool isSort(T[] a)
-        {
-            int len = a.Length;
-            for (int i = 1; i < len; i++)
-            {
-                if (less(a[i], a[i - 1]))
-                    return false;
-            }
-            return true;
         }
     }
 }

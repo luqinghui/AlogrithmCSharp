@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sort</RootNamespace>
     <AssemblyName>Sort</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="libs\InsertSort.cs" />
+    <Compile Include="libs\MergeSort.cs" />
+    <Compile Include="libs\QuickSort.cs" />
     <Compile Include="libs\SelectSort.cs" />
     <Compile Include="libs\ShellSort.cs" />
     <Compile Include="Program.cs" />

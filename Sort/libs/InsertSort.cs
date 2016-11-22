@@ -44,15 +44,5 @@ namespace Sort.libs
             }
             Console.WriteLine();
         }
-        public static bool isSort(T[] a)
-        {
-            int len = a.Length;
-            for (int i = 1; i < len; i++)
-            {
-                if (less(a[i], a[i - 1]))
-                    return false;
-            }
-            return true;
-        }
     }
 }
