@@ -11,13 +11,32 @@ namespace Sort.libs
         public static void sort(T[] a)
         {
             show(a);
-
-
-
+            int len = a.Length;
+            sort(a, 0, len-1);
             show(a);
         }
+        private static void sort(T[] a, int lo, int hi)
+        {
+            if (hi <= lo) return;
+            int j = partition(a, lo, hi);
+            sort(a, lo, j - 1);
+            sort(a, j + 1, hi);
+        }
 
-
+        private static int partition(T[] a, int lo, int hi)
+        {
+            int i = lo, j = hi + 1;
+            T v = a[lo];
+            while(true)
+            {
+                while (less(a[++i], v)) if (i == hi) break;
+                while (less(v, a[--j])) if (j == lo) break;
+                if (i >= j) break;
+                exch(a, i, j);
+            }
+            exch(a, lo, j);
+            return j;
+        }
         private static bool less(T a, T b)
         {
             IComparable at = a as IComparable;
