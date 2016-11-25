@@ -11,7 +11,6 @@ namespace Sort.libs
     {
         public static void sort(T[] a)
         {
-            show(a);
             int len = a.Length;
             for (int i = 0; i < len; i++)
             {
@@ -22,7 +21,6 @@ namespace Sort.libs
                 }
                 exch(a, i, min);
             }
-            show(a);
         }
         private static bool less(T a, T b)
         {

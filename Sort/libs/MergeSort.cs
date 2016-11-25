@@ -11,13 +11,9 @@ namespace Sort.libs
         private static T[] aux;
         public static void sort(T[] a)
         {
-            show(a);
-
             aux = new T[a.Length];
             //sort(a, 0, a.Length - 1);
             sort_BU(a);
-
-            show(a);
         }
         //归并
         public static void merge(T[] a, int lo,int mid,int hi)

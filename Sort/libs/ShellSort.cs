@@ -10,8 +10,6 @@ namespace Sort.libs
     {
         public static void sort(T[] a)
         {
-            show(a);
-
             int N = a.Length;
             int h = 1;
             while (h < N / 3) h = 3 * h + 1;
@@ -22,8 +20,6 @@ namespace Sort.libs
                         exch(a, j, j - h);
             }
             h = h / 3;
-
-            show(a);
         }
         private static bool less(T a, T b)
         {

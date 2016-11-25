@@ -10,8 +10,6 @@ namespace Sort.libs
     {
         public static void sort(T[] a)
         {
-            show(a);
-
             int len = a.Length;
             for(int i = 1; i < len; i++)
             {
@@ -20,8 +18,16 @@ namespace Sort.libs
                     exch(a, j,j-1);
                 }
             }
-
-            show(a);
+        }
+        public static void sort(T[] a, int lo, int hi)
+        {
+            for(int i = lo+1;i<=hi;i++)
+            {
+                for(int j=1;j>lo&&less(a[j],a[j-1]);j--)
+                {
+                    exch(a, j, j - 1);
+                }
+            }
         }
         private static bool less(T a, T b)
         {
