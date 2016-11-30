@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="libs\IndexMaxPQ.cs" />
     <Compile Include="libs\InsertSort.cs" />
+    <Compile Include="libs\MaxPQ.cs" />
     <Compile Include="libs\MergeSort.cs">
       <SubType>Code</SubType>
     </Compile>
