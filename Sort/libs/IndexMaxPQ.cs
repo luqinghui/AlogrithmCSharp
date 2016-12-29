@@ -121,7 +121,6 @@ namespace Sort.libs
                 exch(k, k / 2);
                 k = k / 2;
             }
-
         }
         private void sink(int k)
         {
