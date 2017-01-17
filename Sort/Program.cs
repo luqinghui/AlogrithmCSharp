@@ -13,7 +13,7 @@ namespace Sort
             char[] s = { 's', 'o', 'r', 't', 'e', 'x', 'a', 'm', 'p', 'l', 'e' };
             //Sort.libs.SelectSort<char>.sort(s);
             //Sort.libs.InsertSort<char>.sort(s);
-            Sort.libs.QuickSort<char>.sort(s);
+            Sort.QuickSort<char>.sort(s);
         }
     }
 }

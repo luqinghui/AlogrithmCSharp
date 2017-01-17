@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort.libs
+namespace Sort
 {
     //选择排序
     public class SelectSort<T>

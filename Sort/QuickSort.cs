@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort.libs
+namespace Sort
 {
     class QuickSort<T>
     {
@@ -26,7 +26,7 @@ namespace Sort.libs
             //小数组时，切换为插入排序
             if (hi <= lo + INSERTION_SORT_CUTOFF)
             {
-                libs.InsertSort<T>.sort(a,lo,hi);
+                InsertSort<T>.sort(a,lo,hi);
                 return;
             }
             int j = partition(a, lo, hi);

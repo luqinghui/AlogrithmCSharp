@@ -4,22 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort.libs
+namespace Sort
 {
-    public class ShellSort<T>
+    public class InsertSort<T>
     {
         public static void sort(T[] a)
         {
-            int N = a.Length;
-            int h = 1;
-            while (h < N / 3) h = 3 * h + 1;
-            while (h >= 1)
+            int len = a.Length;
+            for(int i = 1; i < len; i++)
             {
-                for (int i = h; i < N; i++)
-                    for (int j = i; j >= h && less(a[j], a[j - h]); j -= h)
-                        exch(a, j, j - h);
+                for(int j = i; j > 0 && less(a[j],a[j-1]); j--)
+                {
+                    exch(a, j,j-1);
+                }
             }
-            h = h / 3;
+        }
+        public static void sort(T[] a, int lo, int hi)
+        {
+            for(int i = lo+1;i<=hi;i++)
+            {
+                for(int j=1;j>lo&&less(a[j],a[j-1]);j--)
+                {
+                    exch(a, j, j - 1);
+                }
+            }
         }
         private static bool less(T a, T b)
         {

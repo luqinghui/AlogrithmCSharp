@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sort.libs
+namespace Sort
 {
     public class IndexMaxPQ<Key> where Key:IComparable
     {
